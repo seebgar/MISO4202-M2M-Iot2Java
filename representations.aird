@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:iotsystem="http://www.uniandes.edu.co/iot/system" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
-  <viewpoint:DAnalysis xmi:id="_EWw0cG4oEea1Xb1pBvXyjw" selectedViews="_rewYYI79Eeaetq7_sG2F_A _fh0bgKXWEeai7M6X_OG1bw _fh-zkKXWEeai7M6X_OG1bw _fiHWcKXWEeai7M6X_OG1bw _fiOrMKXWEeai7M6X_OG1bw" version="11.1.0.201608251200">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:system="http://www.uniandes.edu.co/iot/system" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis xmi:id="_EWw0cG4oEea1Xb1pBvXyjw" selectedViews="_rewYYI79Eeaetq7_sG2F_A _fh0bgKXWEeai7M6X_OG1bw _fh-zkKXWEeai7M6X_OG1bw _fiHWcKXWEeai7M6X_OG1bw _fiOrMKXWEeai7M6X_OG1bw" version="12.1.0.201708031200">
     <semanticResources>models/ConfortTermico.iotsystem</semanticResources>
     <semanticResources>metamodels/SimpleJava.ecore</semanticResources>
     <semanticResources>http://www.eclipse.org/emf/2002/Ecore</semanticResources>
     <semanticResources>models/java-generado.xmi</semanticResources>
     <semanticResources>models/java-esperado.xmi</semanticResources>
+    <semanticResources>models/java-gen-declarativo.xmi</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" xmi:id="_EgV_gG4uEea1Xb1pBvXyjw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/IotSystem.design/description/IotSystemCompleto.odesign#//@ownedViewpoints[name='iotsystem']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_tD0JQqXIEeaNAbV8Qbn4vQ" name="new Iotsystem Diagram" representation="_ib5bUI7-Eeaetq7_sG2F_A">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_tD0JQqXIEeaNAbV8Qbn4vQ" name="new Iotsystem Diagram" repPath="#_kqELEIoXEeq_PsHXbCiYUg">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/IotSystem.design/description/IotSystemCompleto.odesign#//@ownedViewpoints[name='iotsystem']/@ownedRepresentations[name='Iotsystem%20Diagram']"/>
-        <target xmi:type="iotsystem:IotSystem" href="My.iotsystem#/"/>
+        <target xmi:type="system:IotSystem" href="My.iotsystem#/"/>
       </ownedRepresentationDescriptors>
     </ownedViews>
     <ownedViews xmi:type="viewpoint:DView" xmi:id="_rewYYI79Eeaetq7_sG2F_A">
@@ -18,7 +19,7 @@
     </ownedViews>
     <ownedViews xmi:type="viewpoint:DView" xmi:id="_fh0bgKXWEeai7M6X_OG1bw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_gb3o8KXWEeai7M6X_OG1bw" name="SimpleJava class diagram" representation="_gb3o8aXWEeai7M6X_OG1bw">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_gb3o8KXWEeai7M6X_OG1bw" name="SimpleJava class diagram" repPath="#_kqGAQIoXEeq_PsHXbCiYUg">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="metamodels/SimpleJava.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -33,7 +34,7 @@
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']"/>
     </ownedViews>
   </viewpoint:DAnalysis>
-  <diagram:DSemanticDiagram xmi:id="_ib5bUI7-Eeaetq7_sG2F_A" name="new Iotsystem Diagram">
+  <diagram:DSemanticDiagram xmi:id="_ib5bUI7-Eeaetq7_sG2F_A" name="new Iotsystem Diagram" uid="_kqELEIoXEeq_PsHXbCiYUg">
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_ib5bUY7-Eeaetq7_sG2F_A" source="DANNOTATION_CUSTOMIZATION_KEY">
       <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_ib5bUo7-Eeaetq7_sG2F_A"/>
     </ownedAnnotationEntries>
@@ -45,9 +46,9 @@
     <description xmi:type="description_1:DiagramDescription" href="platform:/resource/IotSystem.design/description/IotSystemCompleto.odesign#//@ownedViewpoints[name='iotsystem']/@ownedRepresentations[name='Iotsystem%20Diagram']"/>
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_ib5bU47-Eeaetq7_sG2F_A"/>
     <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/IotSystem.design/description/IotSystemCompleto.odesign#//@ownedViewpoints[name='iotsystem']/@ownedRepresentations[name='Iotsystem%20Diagram']/@defaultLayer"/>
-    <target xmi:type="iotsystem:IotSystem" href="My.iotsystem#/"/>
+    <target xmi:type="system:IotSystem" href="My.iotsystem#/"/>
   </diagram:DSemanticDiagram>
-  <diagram:DSemanticDiagram xmi:id="_gb3o8aXWEeai7M6X_OG1bw" name="SimpleJava class diagram">
+  <diagram:DSemanticDiagram xmi:id="_gb3o8aXWEeai7M6X_OG1bw" name="SimpleJava class diagram" uid="_kqGAQIoXEeq_PsHXbCiYUg">
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_gb3o8qXWEeai7M6X_OG1bw" source="DANNOTATION_CUSTOMIZATION_KEY">
       <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_gb3o86XWEeai7M6X_OG1bw">
         <computedStyleDescriptions xmi:type="style:EdgeStyleDescription" xmi:id="_xnUoUKXWEeai7M6X_OG1bw" routingStyle="manhattan">

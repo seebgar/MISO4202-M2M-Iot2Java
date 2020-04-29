@@ -1,0 +1,69 @@
+	pre {
+		"Sebastian Garcia".println();
+		"Running ETL".println();
+	}
+	
+	post {
+		"Ended ETL".println();
+	}
+
+
+// Version M2M Declarativo
+
+	
+	
+	rule Iot2SimpleJava
+		transform i : Iot!IotSystem
+		to a : SimpleJava!Application {	
+			a.name = "IotSystem";
+			a.classes = i.digitalArtifacts.equivalent();
+		}
+		
+	rule DigitalArtifact2ClassMethodBody
+		transform da : Iot!DigitalArtifact
+		to c : SimpleJava!Class {
+		
+			var b = new SimpleJava!Body;
+			var m = new SimpleJava!Method;
+			
+			m.name = "Enrouter";
+			m.body = b;
+			
+			c.name = "Enrouter";
+			c.methods.add(m);
+			
+			b.statements = da.resources.equivalent();
+		}
+			
+	
+	// La regla abstract se caracteriza porque está anotada con @abstract y 
+	// tiene un cuerpo que será reutilizado en las reglas concretas.
+	@abstract
+	rule Resource2Statement	
+		transform r : Iot!Resource
+		to m : SimpleJava!MethodCallStatement {
+		
+		var myStringUrl = new SimpleJava!StringLiteral;
+		
+		myStringUrl.value = r.url;	
+		m.arguments.add(myStringUrl);
+		
+	}
+		
+	// Las reglas concretas extienden la regla abstracta y tienen una guarda
+	//  que filtra elementos conformes a Resource que cumple ciertas características.	
+	rule Resource2GetStatement
+		transform r : Iot!Resource
+		to m : SimpleJava!MethodCallStatement extends Resource2Statement {
+			// la GUARD identifica al elemento que tomara esta tranformacion concreta y no otra
+			guard : Iot!Actuator.all.select(s | s.consumes->includes(r)).notEmpty()
+			m.name = 'get';	
+		}
+	
+	
+	rule Resource2PostStatement
+		transform r : Iot!Resource
+		to m : SimpleJava!MethodCallStatement extends Resource2Statement {
+			guard : Iot!Sensor.all.select(s | s.consumes->includes(r)).notEmpty()
+			m.name = 'post';
+	}
