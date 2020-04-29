@@ -1,0 +1,56 @@
+// COMPLETAR!
+
+	pre {
+		"Sebastian Garcia".println();
+		"Running ETL".println();
+	}
+	
+	post {
+		"Ended ETL".println();
+	}
+
+
+// IotSystem -> Java Application
+
+	rule IotSystem2Application
+		transform 
+			s:Iot!IotSystem
+		to
+			t:SimpleJava!Application 
+			{
+				t.name = "IotSystem";
+				
+				var clase = new SimpleJava!Class();
+				clase.name = "Enrouter";
+				var metodo = new SimpleJava!Method();
+				metodo.name = "Enrouter";
+				var cuerpo = new SimpleJava!Body();
+				
+				for ( entity in s.physicalEntities ) {
+					for ( device in entity.devices ) {
+						for ( resource in device.consumes ) {
+							// Method call statements
+							var statement = new SimpleJava!MethodCallStatement();
+							if ( device.isKindOf( Iot!Actuator ) ) {
+								statement.name = "get";
+							} else {
+								statement.name = "post";
+							}
+							
+							// String literals
+							var literal = new SimpleJava!StringLiteral();
+							literal.value = resource.url;
+							
+							statement.arguments.add(literal);
+							cuerpo.statements.add(statement);
+						}
+					}
+				}
+				
+				// Class Associations
+				metodo.body = cuerpo;
+				clase.methods.add(metodo);
+				t.classes.add(clase);
+			}
+
+	
